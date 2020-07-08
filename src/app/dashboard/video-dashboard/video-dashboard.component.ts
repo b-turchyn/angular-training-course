@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Video } from '../../types';
-import { HttpClient } from '@angular/common/http';
 import { VideoService } from '../video.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-video-dashboard',
@@ -11,13 +11,11 @@ import { VideoService } from '../video.service';
 export class VideoDashboardComponent implements OnInit {
 
   @Input()
-  videoList: Video[] | undefined;
+  videoList: Observable<Video[]> = this.videoService.loadVideos();
   
   selectedVideo: Video | undefined;
 
-  constructor(videoService: VideoService) {
-    videoService.loadVideos().subscribe(videos => (this.videoList = videos));
-  }
+  constructor(private videoService: VideoService) { }
 
   ngOnInit() {
   }

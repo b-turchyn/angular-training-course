@@ -1,7 +1,7 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col-md-3 col-sm-4 col-lg-2">
-      <app-video-list [videos]="videoList" [selectedVideo]="selectedVideo" (selectVideo)="doSelectVideo($event)"></app-video-list>
+      <app-video-list [videos]="videoList | async" [selectedVideo]="selectedVideo" (selectVideo)="doSelectVideo($event)"></app-video-list>
     </div>
     <div class="col-md-9 col-sm-8 col-lg-10">
       <app-video-player [video]="selectedVideo"></app-video-player>
