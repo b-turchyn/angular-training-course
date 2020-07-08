@@ -1,8 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Video } from '../../types';
 import { HttpClient } from '@angular/common/http';
-
-const apiBaseUrl: string = "https://api.angularbootcamp.com";
+import { VideoService } from '../video.service';
 
 @Component({
   selector: 'app-video-dashboard',
@@ -16,10 +15,8 @@ export class VideoDashboardComponent implements OnInit {
   
   selectedVideo: Video | undefined;
 
-  constructor(http: HttpClient) {
-    http
-      .get<Video[]>(apiBaseUrl + "/videos")
-      .subscribe(videos => (this.videoList = videos));
+  constructor(videoService: VideoService) {
+    videoService.loadVideos().subscribe(videos => (this.videoList = videos));
   }
 
   ngOnInit() {
