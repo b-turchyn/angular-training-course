@@ -15,4 +15,8 @@ export class VideoPlayerComponent implements OnInit {
   ngOnInit() {
   }
 
+  videoEmbedUrl(video: Video) {
+    return `https://www.youtube-nocookie.com/embed/${ video.id }`;
+  }
+
 }
