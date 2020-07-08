@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Video } from '../../types';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-video-player',
@@ -10,13 +11,13 @@ export class VideoPlayerComponent implements OnInit {
   @Input()
   video: Video | undefined;
 
-  constructor() { }
+  constructor(private sanitizer: DomSanitizer) { }
 
   ngOnInit() {
   }
 
   videoEmbedUrl(video: Video) {
-    return `https://www.youtube-nocookie.com/embed/${ video.id }`;
+    return this.sanitizer.bypassSecurityTrustResourceUrl(`https://www.youtube-nocookie.com/embed/${ video.id }`);
   }
 
 }

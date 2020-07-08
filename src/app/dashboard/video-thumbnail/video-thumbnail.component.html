@@ -1,1 +1,1 @@
-<app-card [thumbnail]="thumbnail(video.id)" [title]="video.title">{{ video.author }}</app-card>
+<app-card [thumbnail]="thumbnail(video.id)" [title]="video.title" [klass]="selected ? 'text-white bg-secondary' : ''">{{ video.author }}</app-card>

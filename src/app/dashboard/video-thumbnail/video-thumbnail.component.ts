@@ -10,6 +10,9 @@ export class VideoThumbnailComponent implements OnInit {
   @Input()
   video: Video;
 
+  @Input()
+  selected: boolean = false;
+
   constructor() { }
 
   ngOnInit() {
