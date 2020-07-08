@@ -1,2 +1,2 @@
-<div>Video List</div>
-<app-video-thumbnail *ngFor="let v of videos" (click)="doSelectVideo(v)"></app-video-thumbnail>
+<h3>Videos</h3>
+<app-video-thumbnail *ngFor="let v of videos" (click)="doSelectVideo(v)" [video]="v"></app-video-thumbnail>

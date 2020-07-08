@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Video } from '../../types';
 
 @Component({
   selector: 'app-video-thumbnail',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./video-thumbnail.component.css']
 })
 export class VideoThumbnailComponent implements OnInit {
+  @Input()
+  video: Video;
 
   constructor() { }
 
