@@ -1,4 +1,1 @@
-<div>
-  <h6>{{video.title}}</h6>
-  <p>{{ video.author }}</p>
-</div>
+<app-card [thumbnail]="thumbnail(video.id)" [title]="video.title">{{ video.author }}</app-card>

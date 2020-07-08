@@ -8,8 +8,6 @@ import { Component, OnInit, Input } from '@angular/core';
 export class NavLinkComponent implements OnInit {
   @Input()
   routerLink: string;
-  @Input()
-  label: string;
 
   constructor() { }
 

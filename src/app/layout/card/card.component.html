@@ -1,0 +1,7 @@
+<div class="card">
+  <img *ngIf="thumbnail" [src]="thumbnail" class="card-img-top" [alt]="title">
+  <div class="card-body">
+    <h5 *ngIf="title" class="card-title">{{ title }}</h5>
+    <p class="card-text"><ng-content></ng-content></p>
+  </div>
+</div>

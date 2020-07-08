@@ -15,4 +15,7 @@ export class VideoThumbnailComponent implements OnInit {
   ngOnInit() {
   }
 
+  thumbnail(id: string) {
+    return `https://img.youtube.com/vi/${ id }/0.jpg`
+  }
 }
