@@ -1,7 +1,7 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col-md-3">
-      <app-video-list [videos]="videoList" (selectVideo)="doSelectVideo($event)"></app-video-list>
+      <app-video-list [videos]="videoList" [selectedVideo]="selectedVideo" (selectVideo)="doSelectVideo($event)"></app-video-list>
     </div>
     <div class="col-md-9">
       <app-video-player [video]="selectedVideo"></app-video-player>

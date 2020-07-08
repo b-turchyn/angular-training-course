@@ -1,0 +1,7 @@
+.logo-red {
+  background: rgb(179,18,23);
+  background: linear-gradient(0deg, rgba(179,18,23,1) 0%, rgba(229,45,39,1) 100%);
+  color: white;
+  border-radius: 5px;
+  margin-left: .1em;
+}
